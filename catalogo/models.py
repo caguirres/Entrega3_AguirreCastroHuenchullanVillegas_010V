@@ -55,6 +55,58 @@ class Administrador(models.Model):
 	def __str__(self):
 		return f'{self.id_admin},{self.Usuario.id_usuario},{self.nombre},{self.correo},{self.telefono},{self.rut}'
 
+class Local(models.Model):
+	id_local=models.AutoField(primary_key=True)
+	nombre=models.CharField(max_length=50)
+	direccion=models.CharField(max_length=100)
+	correo=models.CharField(max_length=50)
+	telefono=models.CharField(max_length=12)
+	prom_califi=models.IntegerField(default=0)
+	ruta_fotos=models.CharField(max_length=100)
+	fecha_alta=models.DateField(null=True, blank=True)
+
+	def __str__(self):
+		return f'{self.id_local},{self.nombre},{self.direccion},{self.correo},{self.telefono},{self.prom_califi},{self.ruta_fotos},{self.fecha_alta}'
+
+class Menu(models.Model):
+	id_menu=models.AutoField(primary_key=True)
+	local=models.ForeignKey('Local', on_delete=models.SET_NULL, null=True)
+	detalle=models.CharField(max_length=250)
+	valor=models.IntegerField(default=0)
+	fecha_alta=models.DateField(null=True, blank=True)
+
+	def __str__(self):
+		return f'{self.id_menu},{self.Local.local},{self.detalle},{self.valor},{self.fecha_alta}'
+
+class Calificacion(models.Model):
+	id_califi=models.AutoField(primary_key=True)
+	usuario=models.ForeignKey('Usuario', on_delete=models.SET_NULL, null=True)
+	local=models.ForeignKey('Local', on_delete=models.SET_NULL, null=True)
+	valor=models.IntegerField(default=0)
+	fecha_alta=models.DateField(null=True, blank=True)
+
+	def __str__(self):
+		return	f'{self.id_califi},{self.Ususario.usuario},{self.Local.local},{self.valor},{self.fecha_alta}'
+	
+class Resenhas(models.Model):
+	id_resenhas=models.AutoField(primary_key=True)
+	usuario=models.ForeignKey('Usuario', on_delete=models.SET_NULL, null=True)
+	local=models.ForeignKey('Local', on_delete=models.SET_NULL, null=True)
+	detalle=models.CharField(max_length=500)
+	fecha_alta=models.DateField(null=True, blank=True)
+
+	def __str__(self):
+		return f'{self.id_resenhas},{self.Usuario.usuario},{self.Local.local},{self.detalle},{self.fecha_alta}'
+
+class Planes(models.Model):
+	id_plan=models.AutoField(primary_key=True)
+	nombre=models.CharField(max_length=20)
+	valor=models.IntegerField(default=0)
+	fecha_alta=models.DateField(null=True, blank=True)
+
+	def __str__(self):
+		return f'{self.id_plan},{self.nombre},{self.valor},{self.fecha_alta}'
+
 
 
 
