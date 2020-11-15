@@ -18,5 +18,48 @@ class Estado(models.Model):
 	id_Estado=models.AutoField(primary_key=True)
 	descripcion=models.CharField(max_length=25)
 
-	def __str__(self):
+	def __str__(self): 
 		return self.descripcion
+
+class Comensal(models.Model):
+	id_comensal=models.AutoField(primary_key=True)
+	usuario=models.ForeignKey('Usuario', on_delete=models.SET_NULL, null=True)
+	nombre=models.CharField(max_length=50)
+	correo=models.CharField(max_length=50)
+	telefono=models.CharField(max_length=12)
+
+	def __str__(self):
+		return f'{self.id_comensal},{self.Usuario.id_usuario},{self.nombre},{self.correo},{self.telefono}'
+
+class Locatario(models.Model):
+	id_locatario=models.AutoField(primary_key=True)
+	Usuario=models.ForeignKey('Usuario', on_delete=models.SET_NULL, null=True)
+	nombre=models.CharField(max_length=50)
+	correo=models.CharField(max_length=50)
+	direc_comer=models.CharField(max_length=100)
+	telef_comer=models.CharField(max_length=12)
+	telefono=models.CharField(max_length=12)
+
+
+	def __str__(self):
+		return f'{self.id_locatario},{self.Usuario.id_usuario},{self.nombre},{self.correo},{self.direc_comer},{self.telef_comer},{self.telefono}'	
+
+class Administrador(models.Model):
+	id_admin=models.AutoField(primary_key=True)
+	usuario=models.ForeignKey('Usuario', on_delete=models.SET_NULL, null=True)
+	nombre=models.CharField(max_length=50)
+	correo=models.CharField(max_length=50)
+	telefono=models.CharField(max_length=12)
+	rut=models.CharField(max_length=12)
+
+	def __str__(self):
+		return f'{self.id_admin},{self.Usuario.id_usuario},{self.nombre},{self.correo},{self.telefono},{self.rut}'
+
+
+
+
+
+
+
+
+
