@@ -1,0 +1,32 @@
+header{
+	margin-top: 50px ;
+}
+
+.navbar	{
+	box-shadow: 2px 2px 5px #000;
+	opacity: .9;
+	
+	
+}
+.navbar .navbar-nav .nav-item .nav-link{
+	color: white;
+}
+#opinion{
+	background: #f1f1f1;
+	padding: 50px 0 30px 0;
+	text-align: center;	
+	margin-top: 40px;
+}
+h1{
+	font-family: luna;
+}
+#comensales{
+	background-color: #f1f1f1;
+}
+footer{
+	margin-top: 50px;
+	margin-left: 50px;
+	padding: 50px;
+	background: url(../img/ppalb.jpg) no-repeat;
+
+}

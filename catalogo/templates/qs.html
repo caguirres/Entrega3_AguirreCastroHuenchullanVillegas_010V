@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <title>La ruta del bajón</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}"> 
+        {% load static %}
+        <link href="{% static 'img/icono3.ico' %}" rel="icon"/>   
+   <body>
+        {% load static %}
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand header-content-left" href="{% url 'inicio' %}"><img src="{% static 'img/icono3.ico' %}" alt="La ruta del bajón" style="width: 20%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto text-black">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'inicio' %}">Planes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'galeria' %}">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'qs' %}">Políticas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'inicio' %}">Contactenos</a>
+            </li>            
+          </ul>            
+        </div>
+      </div>
+        <a href="#" class="btn btn-outline-secondary text-black">INICIAR SESIÓN</a>
+    </nav>
+    <head>
+        <title>QUIENES SOMOS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script language="javascript" src="js/funciones2.js" type="text/javascript"></script>
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
+        <link href="icons/icono3.ico" rel="icon"/>
+    </head>
+    <body>
+     <div class="container" style="background-color:#070707">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+                  <FONT COLOR="white"> 
+                  <br>
+                   <img src="{% static 'img/qs2.jpg' %}" style="width: 100%">
+              <h1>
+                ¿Quienes somos?
+                <br>
+                <br>
+
+              </h1>    
+
+             <p> 
+                  Lanzado en 2020, “La ruta del Bajón” ha pasado de ser un proyecto académico a uno de los mejores sitios de valoración de comidas de nuestra región. lo que permite nuestra visión de una mejor alimentación para más personas. No solo conectamos a las personas con la comida en todos los contextos, sino que trabajamos en estrecha colaboración con los restaurantes y lugares de comida al paso, para permitir un ecosistema sostenible.
+
+                  Estamos comprometidos a fomentar una plataforma neutral y estamos ayudando a los establecimientos de alimentos a mantener altos estándares a través de las calificaciones de nuestros usuarios, Las calificaciones de higiene alimentaria son una codiciada marca de calidad entre nuestros socios de restaurantes.
+                  Los beneficios de ofrecer una opción interesante se plasman en el éxito de “La ruta del bajón”. No dejamos piedra sin remover cuando se trata de hacer que la comida sea más asequible sin comprometer la rentabilidad de un lugar de comida.
+                  Al reunir información meticulosa para nuestros usuarios, les permitimos tomar una decisión informada.
+
+                  Nuestros valores
+                  Resiliencia
+                  Nos esforzamos más allá de nuestras capacidades cuando nos enfrentamos a tiempos difíciles. Cuando prevemos incertidumbre, la abordamos solo con flexibilidad.
+
+                  Aceptación
+                  Los comentarios nunca se toman como algo personal, los dividimos en partes positivas y nos esforzamos por trabajar en todos y cada uno de los elementos de manera aún más efectiva.
+
+                  Propiedad
+                  La gente aquí no trabaja 'para' La ruta del bajon trabaja 'con' La ruta del bajon. Tratamos cada problema como si fuera nuestro, asumimos la responsabilidad e impulsamos el cambio.
+
+                  Humildad
+                  Siempre es el "nosotros" por  sobre el "mí". No nos perdemos en el orgullo o la confianza durante los éxitos individuales, sino que nos enfocamos en ser nosotros mismos en todos los sentidos.
+
+                  Juicio
+                  No son nuestras habilidades las que muestran quiénes somos realmente, son nuestras elecciones. Nuestro objetivo es hacerlo bien, al menos en la mayoría de los casos.
+                </p>
+                <br>
+                   <img src="{% static 'img/qsreg.jpg' %}" style="width: 100%">
+                <h1>  Directrices y políticas
+                <br>
+                <br>
+                </h1>
+                <p>
+                  Si hay una cosa que verdaderamente amamos, es que compartas todos los grandes momentos gastronómicos que tienes. Flores cuando la comida supera tus expectativas, y pedradas cuando el servicio es chocante, crónicas de tus excursiones de comida - todo cuenta.
+                  Mientras esperamos sus opiniones y descripciones de sus experiencias gastronómicas, hay algunas cosas que esperamos de cada usuario en la ruta del bajón. Sus comentarios y fotos, así como su perfil y los comentarios que compartes, están todos sujetos a directrices de contenido, nuestro Código de Conducta del comensal.
+                  Si su actividad en la ruta del bajón no coincide con estas pautas de contenido, nos reservamos el derecho de tomar medidas que consideremos necesarias. Esto podría incluir la alteración o eliminación de sus opiniones o comentarios, o eliminación de su cuenta por completo, con o sin previo aviso. La ruta del bajón también utiliza un algoritmo para ayudar en la eliminación de opiniones sospechosas. 
+                  Si usted ve contenido que no se alinea con estos directrices o las Condiciones del servicio, por favor háganoslo saber. Tendremos en cuenta todos los informes. Sin embargo, debido a la diversidad de nuestra comunidad, es posible que el contenido desagradable para usted podría no cumplir con los criterios para ser eliminado.</p>
+                  <br>
+                   <img src="{% static 'img/qscom.jpg' %}" style="width: 100%">
+                  <h2>
+                  Código de Conducta de un Comensal
+                </h2>
+                 <p>
+                  • Mantenga el desorden: Para asegurarnos de que trabajamos en conjunto hacia la construcción del contenido de la más alta calidad, las reseñas tienen que tener un mínimo de 140 caracteres de largo. Eso es la longitud de un tweet. 
+                  Si cubre la comida, el servicio y el ambiente , no debe quedar corto de caracteres .<br>
+                   Si se llena el espacio con basura, podríamos tener que quitar la revisión en conjunto.<br>
+                   • Relevante: La ruta del bajón, Si no tiene nada que ver con una experiencia gastronómica, es mejor no incluirlo. La cuentas con contenido irrelevante o promocional que solicita clientes serán borradas automáticamente. <br>
+                  • Mantenlo limpio: Ya sea si estás escribiendo un comentario directo de 140 caracteres o un comentario precisamente detallado de tu comida, mantén todo tipo de lenguaje abusivo/incorrecto/odioso, lingo de SMS, amenazas y términos lascivos fuera del comentario. <br>
+                  Mantenlo fresco: Sólo se puede ingresar un comentario por restaurante; cuenta tu experiencia más reciente. Eso es lo que ayudara a las personas cuando tengan que decidir si comer o no comer ahí. Eres libre de editar y actualizar tu comentario basado en subsiguientes visitas en cualquier momento.<br>
+                  • Mantenlo real: Escribe tus comentarios basados en tu propia experiencia. Por favor no exageres o falsifiques tu experiencia. 
+                   • No robes: El plagio es algo que sancionamos automáticamente . Copiar el comentario de otros, es algo que no será tolerado. Confiamos que estás jugando un juego justo y estás creando tu propio contenido siempre.
+                  • Cuenta toda la historia: Si eres suficientemente afortunado que un restaurante te invita una comida o un almuerzo por parte de la casa, recuerda nombrar esto en tu comentario. Estamos seguros que la honestidad es la mejor política, y otros usuarios te respetarán aún más por ello. Si estás en las grandes ligas del mundo gastronómico te daremos un acceso especial para que puedas linkear tus comentarios de tu blog a tus comentarios de La ruta del bajón. Nos encantan los resúmenes, pero comentarios incompletos con un comentario agregado a mano serán borrados.<br>
+                   • Se tu mismo: Tu perfil es tu identidad en La ruta del bajón, por lo que mantenlo actualizados con tus datos reales . Te invitamos a usar un seudónimo, pero por favor, no utilices nombres,o perfiles falsos. Ya que podríamos eliminar tu cuenta si fuese falso. <br>
+                  • No Fasifiques: Identificarte como un blogger oficial de La ruta del bajón, o solicitar compensación o regalos a cambio de promoción en La ruta del bajón NO será tolerado. Si hay múltiples reportes o hay varias evidencias de tales instancias, nos reservamos el derecho de borrar tu perfil de La ruta del bajón. <br>
+                  • Juega por las reglas: Los comentarios y fotos que agregas deben cumplir con los Términos y Condiciones de La ruta del bajón. Leyes locales tienen prioridad y el contenido puede ser moderado para adherirse a estas.<br>
+                   • Busca ayuda de las personas correctas: La ruta del bajón es un sitio web y una aplicación móvil. Si usted tiene un problema con un restaurante, o si siente que un restaurante no va a la altura de los códigos de salud, lo invitamos a contactar directamente a las autoridades correspondientes. Apoyamos a que dichas acusaciones sean realizadas a las autoridades pertinentes en vez de ser mencionadas en comentarios.
+                  <br>
+                  <br>
+                   <img src="{% static 'img/qsres.jpg' %}" style="width: 100%">
+                  <h2>
+                   Directrices para Restaurantes
+                  </h2>
+                  <p>
+                  La ruta del bajón es una gran forma para que restaurantes se acerquen a una extensa comunidad comensales. Un par de cosas para tener en mente: <br>
+                  • Mantén tu listado actualizado: Mientras nuestro equipo hace un esfuerzo para mantener la información en La ruta del bajón al día, Si tus horarios han cambiado y tu listado no esta actualizado, clientes que lleguen atrasados no estarán muy felices contigo (o con La ruta del bajón).  <br>
+                  • No solicites comentarios: La mejor manera de obtener un comentario es de deleitar a clientes con tu comida y servicio. Solicitación selectiva es un estricto NO y ofrecer cualquier tipo de compensación para un comentario es injusto.  <br>
+                  • Responde a crítica de manera positiva: Respira dos veces si recibes un mal comentario. Tres, si fuese necesario. Esto le sucede a todos los restaurantes que tienen clientes. Estos clientes están siempre en lo correcto, incluso cuando no lo estén. Toma esos comentarios negativos como feedback constructivo y ocúpalo como una oportunidad para arreglar las cosas. Más allá de que estés de acuerdo con el feedback o no, toma la crítica de buena forma. Puedes responder con una "Respuesta de la Administración" si te importa, pero por favor no uses esta plataforma para vengarte o para ofrecerle un incentivo al usuario para cambiar o mejorar su comentario. Tus respuestas no pueden ser editadas luego de ser publicadas, así que elige tus palabras con cuidado. • Se responsable: La ruta del bajón no moderará las actividades cuestionables acerca de su restaurante publicado en un comentario. (por ejemplo, que se puede fumar donde no está permitido, la venta de alcohol a menores de edad, o permanecer abiertos hasta más tarde de lo permitido). Los primeros nombres de los empleados y las menciones de los propietarios también se quedarán sin moderar. Este negocio requiere piel gruesa - indicar e informar la actitud percibida respecto de los propietarios o empleados y la presentación de informes de las acciones individuales no se consideran ataques personales. Siempre damos el beneficio de la duda a quien escribe el comentario. <br>
+                  • No albergue: El cumplimiento de las exigencias de los clientes que pidan beneficios a la amenaza de malos comentarios o clasificaciones, envía un mensaje de que este comportamiento es tolerado. Del mismo modo, los usuarios invitados que han reseñado y dado una calificación baja de nuevo al restaurante por una comida de cortesía, invita a falsas reseñas negativas. Estos problemas afectan a toda la comunidad y requieren ser sancionados e informados por nosotros.  <br>
+                  • En un esfuerzo realizado para mantener la neutralidad de contenido en La ruta del bajón, los dueños de restaurantes, empleados no tienen permitido escribir comentarios en La ruta del bajón. Entendemos que al estar en la industria de los restaurantes, eres un apasionado por la comida y quieras compartir tus experiencias. Pero cuando estás profundamente dentro de tu negocio, se vuelve difícil dejar las emociones  fuera. Este es un paso adelante para mantener la imparcialidad (y la calidad) del contenido en La ruta del bajón. <br>
+                  También es importante tener en cuenta que para los empleados de La ruta del bajón esta  prohibido el uso de su situación laboral para solicitar comidas gratis. Si usted observa tales prácticas, repórtelo a help@larutadelbajon.com. La acción apropiada será tomada en contra del usuario, si se aportan pruebas.
+                <br>
+                </P>
+              </FONT>;
+
+        </div> 
+    </body>
+      <div class="container">
+        <footer class="footer">
+           <div class="container"> 
+               <p style="color:white;"> 
+                Pagina diseñada por @COVISOFT-19 <br>
+                (Aguirre / Castro / Huenchullan / Villegas) <br>
+                contactenos@COVISOFT19.cl 
+               </p>
+           </div>
+        </foter>
+      </div>
+</html>
