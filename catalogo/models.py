@@ -29,7 +29,7 @@ class Comensal(models.Model):
 	telefono=models.CharField(max_length=12)
 
 	def __str__(self):
-		return f'{self.id_comensal},{self.Usuario.id_usuario},{self.nombre},{self.correo},{self.telefono}'
+		return f'{self.id_comensal},{self.usuario.nom_usuario},{self.nombre},{self.correo},{self.telefono}'
 
 class Locatario(models.Model):
 	id_locatario=models.AutoField(primary_key=True)
@@ -76,7 +76,7 @@ class Menu(models.Model):
 	fecha_alta=models.DateField(null=True, blank=True)
 
 	def __str__(self):
-		return f'{self.id_menu},{self.Local.local},{self.detalle},{self.valor},{self.fecha_alta}'
+		return f'{self.id_menu},{self.local.nombre},{self.detalle},{self.valor},{self.fecha_alta}'
 
 class Calificacion(models.Model):
 	id_califi=models.AutoField(primary_key=True)
@@ -86,7 +86,7 @@ class Calificacion(models.Model):
 	fecha_alta=models.DateField(null=True, blank=True)
 
 	def __str__(self):
-		return	f'{self.id_califi},{self.Ususario.usuario},{self.Local.local},{self.valor},{self.fecha_alta}'
+		return	f'{self.id_califi},{self.usuario.nom_usuario},{self.local.nombre},{self.valor},{self.fecha_alta}'
 	
 class Resenhas(models.Model):
 	id_resenhas=models.AutoField(primary_key=True)
@@ -96,7 +96,7 @@ class Resenhas(models.Model):
 	fecha_alta=models.DateField(null=True, blank=True)
 
 	def __str__(self):
-		return f'{self.id_resenhas},{self.Usuario.usuario},{self.Local.local},{self.detalle},{self.fecha_alta}'
+		return f'{self.id_resenhas},{self.usuario.nom_usuario},{self.local.nombre},{self.detalle},{self.fecha_alta}'
 
 class Planes(models.Model):
 	id_plan=models.AutoField(primary_key=True)

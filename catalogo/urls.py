@@ -3,8 +3,9 @@ from . import views
 
 urlpatterns=[
 	path('',views.inicio,name='inicio'),
-	path('/templates/galeria',views.galeria,name='galeria'),
-	path('/templates/qs',views.qs,name='qs'),
+	path('galeria',views.galeria,name='galeria'),
+	path('qs',views.qs,name='qs'),
+	path('resenhas_list', views.ResenhasListView.as_view(), name='resenhas_list'),
 ]
 
 	
