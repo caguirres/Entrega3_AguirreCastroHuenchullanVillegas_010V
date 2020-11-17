@@ -11,19 +11,206 @@
 
    </head>
    <body>
-    <h1>Listado de resenhas</h1>
-    {% if resenhas_list %}
-    <ul>
-      {% for resenhas in resenhas_list %}
-      <li>
-        <a href="{{ resenhas.get_absolute_url }}">{{ resenhas.detalle }}</a> 
-      </li>
-      {% endfor %}
-    </ul>
-    {% else%}
-      <p>No hay registros de reseñas.</p>
-    {% endif%}
-   
+        {% load static %}
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand header-content-left" href=""><img src="{% static 'img/icono3.ico' %}" alt="La ruta del bajón" style="width: 20%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto text-black">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#planes">Planes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'galeria' %}">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'qs' %}">Políticas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#contacto">Contactenos</a>
+            </li>            
+          </ul>            
+        </div>
+      </div>
+        <a href="#" class="btn btn-outline-secondary text-black">INICIAR SESIÓN</a>
+    </nav>
+    <header id="main">
+      <div class="background-overlay text-black py-5">
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="header-content-left">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26635.51300508037!2d-70.72017924739131!3d-33.437864172236864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1604282143821!5m2!1ses-419!2scl" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>          
+              </div>              
+            </div>            
+            <div class="col-md-6 text-center">
+              <div class="header-content-right">
+                <h1>
+                  <img src="{% static 'img/logo.png' %}" style="width:90%">
+                </h1>
+                <h3>Lo más importante es tu opinión  </h3>
+                <p class="mt-5">En nuestra actualidad, es clave la reputación y opiniones que un local de comida tenga. La actual necesidad del mercado no solo es conocer la oferta de los sitios de comidas y su cercanía
+                a mi localización, sino que hoy ha tomado un valor mucho más alto la reputación que mi local posee,
+                reputación que los propios clientes pueden otorgar.</p>
+                <a href="{% url 'qs' %}" class="btn btn-outline-secondary">Leer más...</a>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>s      
+    </header>
+    <section id="opinion">
+      <div class="container">
+        <p class="h3 mb-4">
+          "Nuestra materia prima son tus opiniones, es vital que estas opiniones sean experiencias recientes y reales  de comenzales como tú..."
+        </p>
+        <p>Alexis Sanchez (Gte. operaciones "la ruta del bajón")</p>        
+      </div>      
+    </section>
+    <section id="planes">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="info-left">
+              <img src="{% static 'img/Planes/Gold.jpeg' %}" style="width:80%">                
+            </div>            
+          </div>
+          <div class="col-md-6">
+            <div class="info_right">
+              <img src="{% static 'img/Planes/Premium.jpeg' %}" style="width:80%">              
+            </div>            
+          </div>          
+        </div>        
+      </div>      
+    </section>
+    <section id="comensales">
+      <div class="container">
+        <div class="row my5">
+          <div class="col-md-6">
+            <h2>lorem 3</h2>
+              {% if resenhas_list %}
+              <ul>
+                {% for resenhas in resenhas_list %}
+                 <li>
+                   <a href="{{ resenhas.get_absolute_url }}">{{ resenhas.detalle }}</a> 
+                 </li>
+                {% endfor %}
+              </ul>
+              {% else %}
+                <p>No hay registros de reseñas.</p>
+              {% endif %}</p>
+          </div>  
+          <div class="col-md-6">
+            <h2>lorem 3</h2>
+              {% if resenhas_list %}
+              <ul>
+                {% for resenhas in resenhas_list %}
+                 <li>
+                   <a href="{{ resenhas.get_absolute_url }}">{{ resenhas.detalle }}</a> 
+                 </li>
+                {% endfor %}
+              </ul>
+              {% else %}
+                <p>No hay registros de reseñas.</p>
+              {% endif %}</p>
+          </div>            
+        </div>        
+      </div>      
+    </section>
+    <footer id="contacto">
+      <h2 class="text-center text-white my-4">Valoramos tu opinión</textarea></h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <form class="card my-4">
+              <div class="card-budy mt-3 my-4 mx-4">
+                <div class="form-group">
+                  <input type="text" placeholder="Nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Correo electronico" class="form-control">
+                </div>
+                <div class="form-group">
+                  <textarea rows="10" cols="30" placeholder="IngreMensaje" class="form-control"> </textarea>           
+                </div>
+                  <button type="submit" class="btn btn-outline-secondary">Enviar</button>
+              </div>            
+            </form>  
+          </div>        
+        </div>  
+      </div> 
+    </footer>  
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- SCROOLL REVEAL SCRIPT -->
+    <script>
+      window.sr = ScrollReveal();
+
+    sr.reveal('.navbar-brand', {
+      duration: 2000,
+      origin: 'bottom'
+    });
+
+        sr.reveal('.navbar-nav', {
+      duration: 2000,
+      origin: 'top'
+    });
+
+
+    sr.reveal('.header-content-left', {
+      duration: 2000,
+      origin: 'top',
+      distance: '300px'
+    });
+
+    sr.reveal('.header-content-right', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px'
+    });
+
+    sr.reveal('.header-btn', {
+      duration: 2000,
+      delay: 1000, 
+      origin: 'bottom'
+    });
+
+    sr.reveal('#opinion div', {
+      duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+       sr.reveal('#planes div', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      viewFactor: 0.2
+    });
+     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    </script>
+
 
    </body>
 </html>
+ 

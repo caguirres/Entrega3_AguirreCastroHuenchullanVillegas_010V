@@ -4,10 +4,15 @@ from django.views import generic
 
 # Create your views here.
 def inicio(request):
+	resenhas_d=Resenhas.objects.all()
+	username=Resenhas.objects.all()
 
 	return render(
 		request,
-		'inicio.html',)
+		'inicio.html',
+		context={'rese':resenhas_d, 'usu':username}
+		)
+
 
 def galeria(request):
 
@@ -21,11 +26,6 @@ def qs(request):
 		request,
 		'qs.html',)
 
-class ResenhasListView(generic.ListView):
-		model=Resenhas
-		resenhas_inicio='mi_resenha'
-		queryset=Resenhas.objects.filter(detalle__icontains='a')[:3]
-		template_name='resenhas_list.html'
 
 
 
