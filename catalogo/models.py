@@ -7,6 +7,7 @@ import uuid
 class Usuario(models.Model):
 	id_usuario=models.AutoField(primary_key=True)
 	nom_usuario=models.CharField(max_length=20)
+	contrasenha=models.CharField(max_length=30)
 	tipo=models.CharField(max_length=1)
 	estado=models.ForeignKey('Estado', on_delete=models.SET_NULL, null=True)
 	fecha_alta=models.DateField(null=True, blank=True)
