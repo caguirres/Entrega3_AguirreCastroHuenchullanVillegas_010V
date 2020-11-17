@@ -27,6 +27,14 @@ def qs(request):
 		'qs.html',)
 
 
+def suscrip(request):
+
+	return render(
+		request,
+		'form_suscrip.html',)
+
+
+
 
 
 

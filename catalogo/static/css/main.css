@@ -2,6 +2,27 @@ header{
 	margin-top: 50px ;
 }
 
+legend{
+  font-size: 2em;
+  color: #ffffff; 
+}
+fieldset
+{
+  left:50%;
+  top:50%;
+  width: 700px;
+}
+.formulario
+{
+	width:auto;
+}
+#formula{
+	margin-top: 150px;
+
+	align-content: left;
+}
+
+
 .navbar	{
 	box-shadow: 2px 2px 5px #000;
 	opacity: .9;
@@ -28,5 +49,82 @@ footer{
 	margin-left: 50px;
 	padding: 50px;
 	background: url(../img/ppalb.jpg) no-repeat;
+
+}
+
+#modal_container{
+	display: flex;
+	background-color: rgba(0,0,0,0.3);
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	visibility: hidden;
+
+}
+
+#modal_container.active{
+	visibility: visible;
+}
+
+
+
+.popup{
+	background-color: #f8f8f8;
+	width: 500px;
+	max-width: 100%
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	text-align: center;
+
+}
+.popup form	.cont_iniciar input{
+	width: 80%;
+	margin-bottom: 20px;
+	height: 52px;
+	line-height: 52px;
+	font-size: 18px;
+	text-align: center;
+	border:	1px solid #BBBBBB;
+
+}
+
+
+.btn-cerrar-pop{
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	color: #BBBBBB;
+	transition: .3s	ease all;
+
+
+
+}
+
+
+
+#btn-cerrar :hover {
+	color: #000;
+}
+
+.popup form .btn-ingresar{
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	background: #5e7de3;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.popup form .btn-ingresar :hover{
+	background:	rgba(94,125,227,5);
 
 }
