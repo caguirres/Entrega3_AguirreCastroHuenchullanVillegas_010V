@@ -34,11 +34,14 @@
             </li>
             <li class="nav-item">
               <a class="nav-link " href="{% url 'inicio' %}">Contactenos</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link " href="{% url 'local'%}">Local</a>
             </li>            
+             </li>            
           </ul>            
         </div>
       </div>
-        <a href="#" class="btn btn-outline-secondary text-black">INICIAR SESIÓN</a>
     </nav>
     <head>
         <title>QUIENES SOMOS</title>
@@ -140,6 +143,27 @@
               </FONT>;
 
         </div> 
+        
+           <div class="modal-container" id="modal_container">
+              <div class="popup" id="popup">
+                <a href="{% url 'inicio' %}" id="btn-cerrar" class="btn-cerrar-pop"><i class="fas fa-times"></i></a>
+                <h3>INICIO DE SESION</h3>
+                <form action="">
+                <div class="cont_iniciar">
+                  <input type="text" placeholder="Nombre de Usuario">
+                  <input type="password" placeholder="Contraseña">
+                </div>
+                <input type="submit" class="btn-ingresar" value="ingresar">
+             <p>
+               
+             </p>
+                <a href="{% url 'form_suscrip' %}">registrarse</a>
+             <p>
+               
+             </p>
+                </form>
+            </div>
+           </div>
     </body>
       <div class="container">
         <footer class="footer">

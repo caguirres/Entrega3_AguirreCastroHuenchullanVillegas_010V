@@ -49,109 +49,7 @@
       </div>
         <a href="#" class="btn btn-outline-secondary text-black" id="btn-sesion">INICIAR SESIÓN</a>
     </nav>
-    <header id="main">
-      <div class="background-overlay text-black py-5">
-        <div class="container mt-4">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="header-content-left">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26635.51300508037!2d-70.72017924739131!3d-33.437864172236864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1604282143821!5m2!1ses-419!2scl" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>          
-              </div>              
-            </div>            
-            <div class="col-md-6 text-center">
-              <div class="header-content-right">
-                <h1>
-                  <img src="{% static 'img/logo.png' %}" style="width:90%">
-                </h1>
-                <h3>Lo más importante es tu opinión  </h3>
-                <p class="mt-5">En nuestra actualidad, es clave la reputación y opiniones que un local de comida tenga. La actual necesidad del mercado no solo es conocer la oferta de los sitios de comidas y su cercanía
-                a mi localización, sino que hoy ha tomado un valor mucho más alto la reputación que mi local posee,
-                reputación que los propios clientes pueden otorgar.</p>
-                <a href="{% url 'qs' %}" class="btn btn-outline-secondary">Leer más...</a>
-              </div>
-            </div>
-          </div>
-        </div>        
-      </div>
-     
-    </header>
 
-    <section id="opinion">
-      <div class="container">
-        <p class="h3 mb-4">
-          "Nuestra materia prima son tus opiniones, es vital que estas opiniones sean experiencias recientes y reales  de comenzales como tú..."
-        </p>
-        <p>Alexis Sanchez (Gte. operaciones "la ruta del bajón")</p>        
-      </div>      
-    </section>
-    <section id="planes">
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-md-6">
-            <div class="info-left">
-              <img src="{% static 'img/Planes/Gold.jpeg' %}" style="width:80%">                
-            </div>            
-          </div>
-          <div class="col-md-6">
-            <div class="info_right">
-              <img src="{% static 'img/Planes/Premium.jpeg' %}" style="width:80%">              
-            </div>            
-          </div>          
-        </div>        
-      </div>      
-    </section>
-    <section id="comensales">
-      <div class="container">
-        <div class="row my5">
-         
-              {% if rese %}
-              
-                {% for resenhas in rese|slice:":2" %}
-                 <div class="col-md-6">
-                  <div class="col-6 offset-3 text-center">
-                  <h2> <a>{{ resenhas.usuario.nom_usuario }}</a> </h2>
-                </div>
-                  <ul>
-                   <li>
-                    <a>{{ resenhas.detalle }}</a> 
-                  </li>
-                 </ul>
-
-                  </div> 
-                {% endfor %}
-              {% else %}
-              <div class="col-6 offset-3 text-center">
-                 <p>No hay registros de reseñas.</p>
-              </div>
-               
-              {% endif %}</p>
-                    
-        </div>        
-      </div>      
-    </section>
-    <footer id="contacto">
-      <h2 class="text-center text-white my-4">Valoramos tu opinión</textarea></h2>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <form class="card my-4">
-              <div class="card-budy mt-3 my-4 mx-4">
-                <div class="form-group">
-                  <input type="text" placeholder="Nombre" class="form-control">
-                </div>
-                <div class="form-group">
-                  <input type="email" placeholder="Correo electronico" class="form-control">
-                </div>
-                <div class="form-group">
-                  <textarea rows="10" cols="30" placeholder="IngreMensaje" class="form-control"> </textarea>           
-                </div>
-                  <button type="submit" class="btn btn-outline-secondary">Enviar</button>
-              </div>            
-            </form>  
-          </div>        
-        </div>  
-      </div> 
-    </footer>  
     <!-- BOOTSTRAP SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -215,7 +113,24 @@
       });
     });
     </script>
-      
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+     <div class="container_local" id="container_local" align="center">
+      <h2 > MENU LOCAL </h2>
+      <hr>
+      <h4>
+        <a href="{% url 'agregar_local'%}">AGREGAR LOCAL</a>
+      </h4>
+      <h4>
+        <a href="{% url 'local_list'%}">MOSTRAR LOCAL</a>
+      </h4>
+
+
+     </div>
+     
            <div class="modal-container" id="modal_container">
               <div class="popup" id="popup">
                 <a href="{% url 'inicio' %}" id="btn-cerrar" class="btn-cerrar-pop"><i class="fas fa-times"></i></a>
@@ -236,6 +151,23 @@
                 </form>
             </div>
            </div>
-   </body>
+
+
+
+      </body>
+     <div class="container">
+      <footer class="footer">
+        <div class="container"> 
+         <p style="color:white;"> 
+            Pagina diseñada por @COVISOFT-19 <br>
+           (Aguirre / Castro / Huenchullan / Villegas) <br>
+           contactenos@COVISOFT19.cl 
+         </p>
+        </div>
+      </foter>
+  </div
+      
+          
+ 
 </html>
   

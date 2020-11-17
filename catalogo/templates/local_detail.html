@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+        <h2>detail Local</h2>
+
+   </head>
+   <body>
+    <h1>Local:{{ nombre }}</h1>
+    <p>{{local.direccion}}</p>
+
+    <div style="margin-left: 20px; margin-top: 20px">
+      <h4>titulo</h4>
+      <dl>
+        {% for local in menu.local_set.all%}
+        <dt><a href="{% url 'local_detail' id_menu.pk%}">{{detalle}}</a>({{menu.local_set.all}})</dt>
+        <dd>{{menu.detalle}}</dd>
+        {% endfor}
+      </dl>
+      
+    </div>
+  
+    
+   </body>
+</html>
+  
+
+ 

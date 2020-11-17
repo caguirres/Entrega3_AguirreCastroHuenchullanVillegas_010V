@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
    <head>
+          <div class="modal-container" id="modal_container">
+            <div class="popup" id="popup">
+                <a href="{% url 'inicio' %}" id="btn-cerrar" class="btn-cerrar-pop"><i class="fas fa-times"></i></a>
+                <h3>INICIO DE SESION</h3>
+                <form action="">
+                <div class="cont_iniciar">
+                  <input type="text" placeholder="Nombre de Usuario">
+                  <input type="password" placeholder="Contraseña">
+                </div>
+                <input type="submit" class="btn-ingresar" value="ingresar">
+             <p>
+               
+             </p>
+                <a href="{% url 'form_suscrip' %}">registrarse</a>
+             <p>
+               
+             </p>
+                </form>
+          </div>
+        </div>
         <title>La ruta del bajón</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -44,82 +64,51 @@
         </div>
       </div>
     </nav>
-    <div class="row mt-7">
-          <div class="container" style="background-color:#070707">
-           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-             </ol>
-             <div class="carousel-inner" role="listbox">
-               <div class="carousel-item active">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/logo.png' %}" alt="First slide" width="100%">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/a1.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/c1.jpg' %}" alt="Second slide" width="1200" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/c2.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/a3.png' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/c3.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/c4.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/a2.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/c5.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/c6.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-               <div class="carousel-item">
-                 <img class="d-block img-fluid" src="{% static 'img/slide/a4.jpg' %}" alt="Third slide" width="1300" height="200">
-               </div>
-             </div>
-             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="sr-only">Anterior</span>
-             </a>
-             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="sr-only">Siguiente</span>
-             </a>
-           </div>
-          </div>
-    </div>
-               <div class="modal-container" id="modal_container">
-              <div class="popup" id="popup">
-                <a href="{% url 'inicio' %}" id="btn-cerrar" class="btn-cerrar-pop"><i class="fas fa-times"></i></a>
-                <h3>INICIO DE SESION</h3>
-                <form action="">
-                <div class="cont_iniciar">
-                  <input type="text" placeholder="Nombre de Usuario">
-                  <input type="password" placeholder="Contraseña">
-                </div>
-                <input type="submit" class="btn-ingresar" value="ingresar">
-             <p>
-               
-             </p>
-                <a href="{% url 'form_suscrip' %}">registrarse</a>
-             <p>
-               
-             </p>
-                </form>
+     {% load crispy_forms_tags %}
+         <hr>
+    <hr>
+    <hr>
+    <hr>
+
+
+
+          <div class="row">
+            <div class="col-12 col_md-6 offset-md-3">
+
+              <div class="card">
+                <div class="card-body">
+                          <h2>AGREGAR LOCAL</h2>
+                          <hr>
+
+
+                  <form action="" method="post" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+                    {{ form | crispy }}
+
+                    <div class="d-flex justify-content-center">
+                        
+                       <a href="{%url 'local'%}"> Volver  </a>
+                       <input type="submit" value="Guargar" class="btn btn-primary">
+
+
+                    </div>
+                  </form>
+
+                  {{mensaje}}
+
+
+
+                  </div>
+              </div>
+
+
             </div>
-           </div>
+          </div>
 
 
+
+   
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -199,6 +188,11 @@
       });
     });
     </script>
-    
+
+
+
+
+   </body>
 </html>
  
+
