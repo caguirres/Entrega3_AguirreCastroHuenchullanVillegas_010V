@@ -38,6 +38,10 @@ fieldset
 	text-align: center;	
 	margin-top: 40px;
 }
+
+#ico_usr{
+	margin-left: 20px;
+}
 h1{
 	font-family: luna;
 }

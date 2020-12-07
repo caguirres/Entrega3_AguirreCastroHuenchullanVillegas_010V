@@ -29,7 +29,7 @@
               <a class="nav-link" href="{% url 'local' %}">Local</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'usuario_adm' %}">Usuario</a>
+              <a class="nav-link" href="#">Usuario</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Comentario</a>
@@ -42,7 +42,7 @@
          {% endif %}   
   </div>
       </div>
-      <li>
+        <li>
         {% if user.is_authenticated %}
           <a href="{% url 'logout' %}" class="btn btn-outline-secondary text-black">CERRAR SESIÓN </a>
     
@@ -128,13 +128,13 @@
     <hr>
 
      <div class="container_local" id="container_local" align="center" style="background-color:#EBE9E8;">
-      <h2 > MENU LOCAL </h2>
+      <h2 > MENU USUARIO </h2>
       <hr>
       <h4>
-        <a href="{% url 'agregar_local'%}" class="btn btn-outline-secondary text-black">AGREGAR LOCAL</a>
+        <a href="{% url 'usuario_add'%}" class="btn btn-outline-secondary text-black">AGREGAR USUARIO</a>
       </h4>
       <h4>
-        <a href="{% url 'local_list'%}" class="btn btn-outline-secondary text-black">MOSTRAR LOCAL</a>
+        <a href="{% url 'usuario_list'%}" class="btn btn-outline-secondary text-black">MOSTRAR USUARIO</a>
       </h4>
 
 

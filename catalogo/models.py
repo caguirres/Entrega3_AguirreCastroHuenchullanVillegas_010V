@@ -13,7 +13,7 @@ class Usuario(models.Model):
 	fecha_alta=models.DateField(null=True, blank=True)
 
 	def __str__(self):
-		return f'{self.id_usuario}, {self.nom_usuario}, {self.tipo}, {self.estado}, {self.fecha_alta}'
+		return f'{self.id_usuario}, {self.nom_usuario}, {self.contrasenha}, {self.tipo}, {self.estado}, {self.fecha_alta}'
 
 class Estado(models.Model):
 	id_Estado=models.AutoField(primary_key=True)

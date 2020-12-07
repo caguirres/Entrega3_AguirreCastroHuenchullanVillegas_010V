@@ -22,7 +22,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
         </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto text-black">
             {% if user.is_authenticated %}  
             <li class="nav-item">
@@ -41,8 +41,8 @@
           </ul>  
          {% endif %}   
   </div>
-      </div>
-      <li>
+        <li>
+        <li>
         {% if user.is_authenticated %}
           <a href="{% url 'logout' %}" class="btn btn-outline-secondary text-black">CERRAR SESIÓN </a>
     
@@ -57,7 +57,32 @@
         </li>
         {% endif %}
       </li>
+      </div>
     </nav>
+                                 
+        
+    <header id="main">
+      <div class="background-overlay text-black py-5">
+        <div class="container mt-4">
+          <div class="row">
+          
+            <div class="col-md-6 text-center">
+              <div class="header-content-right">
+                <h1>
+                  <img src="{% static 'img/logo.png' %}" style="width:90%">
+                </h1>
+                <h3>Lo más importante es tu opinión  </h3>
+                <p class="mt-5">En nuestra actualidad, es clave la reputación y opiniones que un local de comida tenga. La actual necesidad del mercado no solo es conocer la oferta de los sitios de comidas y su cercanía
+                a mi localización, sino que hoy ha tomado un valor mucho más alto la reputación que mi local posee,
+                reputación que los propios clientes pueden otorgar.</p>
+                <a href="{% url 'qs' %}" class="btn btn-outline-secondary">Leer más...</a>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+     
+    </header>
 
     <!-- BOOTSTRAP SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -122,61 +147,17 @@
       });
     });
     </script>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-
-     <div class="container_local" id="container_local" align="center" style="background-color:#EBE9E8;">
-      <h2 > MENU LOCAL </h2>
-      <hr>
-      <h4>
-        <a href="{% url 'agregar_local'%}" class="btn btn-outline-secondary text-black">AGREGAR LOCAL</a>
-      </h4>
-      <h4>
-        <a href="{% url 'local_list'%}" class="btn btn-outline-secondary text-black">MOSTRAR LOCAL</a>
-      </h4>
-
-
-     </div>
-     
-           <div class="modal-container" id="modal_container">
-              <div class="popup" id="popup">
-                <a href="{% url 'inicio' %}" id="btn-cerrar" class="btn-cerrar-pop"><i class="fas fa-times"></i></a>
-                <h3>INICIO DE SESION</h3>
-                <form action="">
-                <div class="cont_iniciar">
-                  <input type="text" placeholder="Nombre de Usuario">
-                  <input type="password" placeholder="Contraseña">
-                </div>
-                <input type="submit" class="btn-ingresar" value="ingresar">
-             <p>
-               
-             </p>
-                <a href="{% url 'form_suscrip' %}">registrarse</a>
-             <p>
-               
-             </p>
-                </form>
-            </div>
+          <div class="container">
+        <footer class="footer">
+           <div class="container"> 
+               <p style="color:white;"> 
+                Pagina diseñada por @COVISOFT-19 <br>
+                (Aguirre / Castro / Huenchullan / Villegas) <br>
+                contactenos@COVISOFT19.cl 
+               </p>
            </div>
-
-
-
-      </body>
-     <div class="container">
-      <footer class="footer">
-        <div class="container"> 
-         <p style="color:white;"> 
-            Pagina diseñada por @COVISOFT-19 <br>
-           (Aguirre / Castro / Huenchullan / Villegas) <br>
-           contactenos@COVISOFT19.cl 
-         </p>
-        </div>
-      </foter>
-  </div
-      
-          
- 
+        </foter>
+      </div>
+   </body>
 </html>
   
