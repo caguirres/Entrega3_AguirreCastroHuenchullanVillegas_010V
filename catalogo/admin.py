@@ -12,3 +12,4 @@ admin.site.register(Menu)
 admin.site.register(Calificacion)
 admin.site.register(Resenhas)
 admin.site.register(Planes)
+ 

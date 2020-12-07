@@ -24,7 +24,6 @@ urlpatterns=[
 	path('usuario_del/<id_usuario>', eliminar_usuario, name="usuario_del"),
 	path('usuario_adm', views.usuario_adm, name="usuario_adm"),
 
-
 ]
 
 urlpatterns+=[

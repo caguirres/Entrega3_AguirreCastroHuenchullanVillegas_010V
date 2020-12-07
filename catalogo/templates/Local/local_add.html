@@ -39,29 +39,41 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+     <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto text-black">
+            {% if user.is_authenticated %}  
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+              <a class="nav-link" href="{% url 'local' %}">Local</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'inicio' %}">Planes</a>s
+              <a class="nav-link" href="{% url 'usuario_adm' %}">Usuario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'galeria' %}">Galería</a>
+              <a class="nav-link" href="#">Comentario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'qs' %}">Políticas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="{% url 'inicio' %}">Contactenos</a>
+              <a class="nav-link" href="{% url 'inicio' %}">volver</a>
             </li> 
-            <li class="nav-item">
-              <a class="nav-link " href="{% url 'local'%}">Local</a>
-            </li>            
-             </li>            
-          </ul>            
-        </div>
+              {% else %}  
+          </ul>  
+         {% endif %}   
+  </div>
+        <li>
+        <li>
+        {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}" class="btn btn-outline-secondary text-black">CERRAR SESIÓN </a>
+    
+
+         <a href="#" style="color: white">{{ user.username }}</a>
+        </li>
+        
+        <li>
+
+        {% else %}
+          <a href="{% url 'login' %}" class="btn btn-outline-secondary text-black">INICIAR SESIÓN</a>
+        </li>
+        {% endif %}
+      </li>
       </div>
     </nav>
      {% load crispy_forms_tags %}
@@ -88,8 +100,8 @@
 
                     <div class="d-flex justify-content-center">
                         
-                       <a href="{%url 'local'%}"  class="btn btn-outline-secondary text-black">  Volver  </a>  | 
-
+                       <a href="{%url 'local'%}"  class="btn btn-outline-secondary text-black">  Volver  </a> 
+                       &nbsp;
                        <input type="submit" value="Guardar" class="btn btn-primary">
 
 

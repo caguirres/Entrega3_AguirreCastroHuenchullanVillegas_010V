@@ -35,6 +35,7 @@ def suscrip(request):
 	return render(
 		request,
 		'form_suscrip.html',)
+	
 
 def agregar_local(request):
 
