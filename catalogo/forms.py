@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usuario, Estado, Comensal, Locatario, Administrador, Local, Menu, Calificacion, Resenhas, Planes
+from .models import Usuario, Estado, Comensal, Locatario, Administrador, Local, Menu, Calificacion, Resenhas, Planes, Perfil
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -27,5 +27,12 @@ class UsuarioForm(forms.ModelForm):
 			"fecha_alta":forms.SelectDateWidget()
 		}
 
+
+class UserForms(forms.ModelForm):
+
+	class Meta:
+		model=Perfil
+		fields='__all__'
+		
 
  

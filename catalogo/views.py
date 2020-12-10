@@ -3,7 +3,8 @@ from .models import Usuario, Estado, Comensal, Locatario, Administrador, Local, 
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .forms import LocalForm, CustomUserCreationForm, UsuarioForm
+from .forms import LocalForm, CustomUserCreationForm, UsuarioForm, UserForms
+from django.template import RequestContext
 
 # Create your views here.
 def inicio(request):
@@ -130,6 +131,23 @@ from django.views import generic
 
 class LocalDetailView(generic.DetailView):
 	model=Local
+
+
+def add_user(request):
+	data = {
+			'form':UserForms()
+	}
+	if request.method=="POST":
+		perfil_form=UserForms(request.POST)
+		if perfil_form.is_valid():
+			perfil_form.save()
+	
+		else:
+			data["form"]=perfil_form
+
+	return render(
+		request,
+		'usuario/add_user.html',data)
 
 
 

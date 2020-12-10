@@ -2,7 +2,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
-from .views import agregar_local, listar_local, modificar_local, eliminar_local, local_main, registro, agregar_usuario, listar_usuario, modificar_usuario, eliminar_usuario
+from .views import agregar_local, listar_local, modificar_local, eliminar_local, local_main, registro, agregar_usuario, listar_usuario, modificar_usuario, eliminar_usuario, add_user
 from django.contrib import admin
 
 urlpatterns=[
@@ -23,7 +23,7 @@ urlpatterns=[
 	path('usuario_mod/<id_usuario>', modificar_usuario, name="usuario_mod"),
 	path('usuario_del/<id_usuario>', eliminar_usuario, name="usuario_del"),
 	path('usuario_adm', views.usuario_adm, name="usuario_adm"),
-
+	path('add_user', views.add_user, name="add_user"),
 ]
 
 urlpatterns+=[

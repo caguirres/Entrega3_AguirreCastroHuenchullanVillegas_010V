@@ -28,9 +28,11 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'local' %}">Local</a>
             </li>
+            {% if perms.catalogo.add_usuario%}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'usuario_adm' %}">Usuario</a>
             </li>
+            {%endif%}
             <li class="nav-item">
               <a class="nav-link" href="#">Comentario</a>
             </li>

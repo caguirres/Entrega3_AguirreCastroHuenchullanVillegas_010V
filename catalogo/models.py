@@ -1,8 +1,14 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 import uuid
 
 # Create your models here.
+
+class Perfil(User):
+	tipo=models.CharField(max_length=1)
+
+
 
 class Usuario(models.Model):
 	id_usuario=models.AutoField(primary_key=True)
