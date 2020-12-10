@@ -5,6 +5,17 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .forms import LocalForm, CustomUserCreationForm, UsuarioForm, UserForms
 from django.template import RequestContext
+from django.http import HttpResponse
+
+
+
+
+def hello(request):
+    return HttpResponse('hello')
+
+def qs2(request):
+    return HttpResponse('qs')
+
 
 # Create your views here.
 def inicio(request):
