@@ -1,6 +1,6 @@
 from django.contrib import admin
 # Register your models here.
-from . models import Usuario, Estado, Comensal, Locatario, Administrador, Local, Menu, Calificacion, Resenhas, Planes
+from . models import Usuario, Estado, Comensal, Locatario, Administrador, Local, Menu, Calificacion, Resenhas, Planes, Ubicacion, Perfil
 
 admin.site.register(Usuario)
 admin.site.register(Estado)
@@ -12,4 +12,6 @@ admin.site.register(Menu)
 admin.site.register(Calificacion)
 admin.site.register(Resenhas)
 admin.site.register(Planes)
+admin.site.register(Ubicacion)
+admin.site.register(Perfil)
  
