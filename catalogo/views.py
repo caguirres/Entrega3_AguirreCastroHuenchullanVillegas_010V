@@ -3,15 +3,13 @@ from .models import Usuario, Estado, Comensal, Locatario, Administrador, Local, 
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .forms import LocalForm, CustomUserCreationForm, UsuarioForm, UserForms
+from .forms import LocalForm, CustomUserCreationForm, UsuarioForm, UserForms, UbicacionForm
 from django.template import RequestContext
 from django.http import HttpResponse
 
 
 
 
-def hello(request):
-    return HttpResponse('hello')
 
 def qs2(request):
     return HttpResponse('qs')
@@ -27,6 +25,12 @@ def inicio(request):
 		'inicio.html',
 		context={'rese':resenhas_d, 'usu':username}
 		)
+
+def mapa(request):
+
+	return render(
+		request,
+		'mapa.html',)
 
 
 def galeria(request):

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Map</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <!-- [START maps_add_map_resources_style] -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- [END maps_add_map_resources_style] -->
+      {% load static %}
+    <script src="{% static 'js/js.js' %}"></script>
+  </head>
+  <body>
+    <!-- [START maps_add_map_heading] -->
+    <h3>My Google Maps Demo</h3>
+    <!-- [END maps_add_map_heading] -->
+    <!-- [START maps_add_map_div] -->
+    <!--The div element for the map -->
+    <div id="map"></div>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26635.51300508037!2d-70.72017924739131!3d-33.437864172236864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1604282143821!5m2!1ses-419!2scl" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>      
+    <!-- [END maps_add_map_div] -->
+  </body>
+</html>

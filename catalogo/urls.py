@@ -24,8 +24,8 @@ urlpatterns=[
 	path('usuario_del/<id_usuario>', eliminar_usuario, name="usuario_del"),
 	path('usuario_adm', views.usuario_adm, name="usuario_adm"),
 	path('add_user', views.add_user, name="add_user"),
-	path('hello/', views.hello, name='hello'),
-	path('qs2/', views.qs2, name='qs'),
+	path('qs2', views.qs2, name='qs2'),
+	path('mapa',views.mapa,name='mapa'),
 ]
 
 

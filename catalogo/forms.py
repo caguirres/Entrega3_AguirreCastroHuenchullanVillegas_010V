@@ -1,6 +1,7 @@
 from django import forms
-from .models import Usuario, Estado, Comensal, Locatario, Administrador, Local, Menu, Calificacion, Resenhas, Planes, Perfil
+from .models import Usuario, Estado, Comensal, Locatario, Administrador, Local, Menu, Calificacion, Resenhas, Planes, Perfil, Ubicacion
 from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm
 
 
 class LocalForm(forms.ModelForm):
@@ -33,6 +34,12 @@ class UserForms(forms.ModelForm):
 	class Meta:
 		model=Perfil
 		fields='__all__'
+
+class UbicacionForm(ModelForm):
+	class Meta:
+		model = Ubicacion
+		fields='__all__'
+
 		
 
  
